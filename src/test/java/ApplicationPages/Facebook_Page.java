@@ -77,6 +77,7 @@ public class Facebook_Page extends webBrowser {
     public static void checkposttext() {
         try {
             Thread.sleep(5000);
+            driver.findElement(By.xpath("//div[contains(text(),'Hello World!')]")).click();
            String test= driver.findElement(By.xpath("//div[contains(text(),'Hello World!')]")).getText();
            assertEquals("Hello World!",test);
             System.out.println("Your posted comments Is : " + test);
