@@ -14,4 +14,4 @@ Feature:User login to the Facebook and post the Status Successfully
 
     Examples:
       |TCNum    |TCDesc                                                                 | Login               | password  |Postcomments|
-      |TC_01    |To verify User login to the Facebook and post the Status Successfully  | digiumdsmb@gmail.com |Intel123* |Hello World!|
+      |FBTC_01  |To verify User login to the Facebook and post the Status Successfully  | xxxxxxxxx@gmail.com |xxxxxxxx |Hello World!|

@@ -1,7 +1,15 @@
+/**
+ * In this class contains Pagewise business methods of facebook
+ * Author:Basheer Ahamed
+ * Date:05/08/2021
+ */
+
 package ApplicationPages;
 
 import framework.webBrowser;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,8 +21,6 @@ public class Facebook_Page extends webBrowser {
     private static final String postenter_edit ="//div[@data-block='true']//div";
     private static final String post_button="//div[@aria-label='Post']";
 
-
-
     //Verify webpage Title
     public static void verifyPagetitle(String Title) {
         try {
@@ -25,6 +31,7 @@ public class Facebook_Page extends webBrowser {
         }catch (Exception e) {
             e.printStackTrace();
             System.out.println("Something went wrong verify title");
+            driver.quit();
         }
     }
 
@@ -40,6 +47,7 @@ public class Facebook_Page extends webBrowser {
         }catch (Exception e) {
             e.printStackTrace();
             System.out.println("Something went wrong while login facebook");
+            driver.quit();
         }
     }
 
@@ -57,6 +65,7 @@ public class Facebook_Page extends webBrowser {
         }catch (Exception e) {
             e.printStackTrace();
             System.out.println("Something went wrong while posting facebook");
+            driver.quit();
         }
     }
 
@@ -69,7 +78,8 @@ public class Facebook_Page extends webBrowser {
             driver.findElement(By.xpath("//a[@aria-label='Facebook']")).click();
         }catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Something went wrong while posting facebook");
+            System.out.println("Something went wrong while click post button in facebook");
+            driver.quit();
         }
     }
 
@@ -77,13 +87,18 @@ public class Facebook_Page extends webBrowser {
     public static void checkposttext() {
         try {
             Thread.sleep(5000);
-            driver.findElement(By.xpath("//div[contains(text(),'Hello World!')]")).click();
+
+            WebElement element = driver.findElement(By.xpath("//div[contains(text(),'Hello World!')]"));
+            Actions action = new Actions(driver);
+            action.moveToElement(element).build().perform();
+            //driver.findElement(By.xpath("//div[contains(text(),'Hello World!')]")).click();
            String test= driver.findElement(By.xpath("//div[contains(text(),'Hello World!')]")).getText();
            assertEquals("Hello World!",test);
             System.out.println("Your posted comments Is : " + test);
         }catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Something went wrong while posting facebook");
+            System.out.println("Something went wrong while verify the review posting facebook");
+            driver.quit();
         }
     }
 }
