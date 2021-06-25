@@ -2,7 +2,7 @@
 <tbody>
 <tr>
 <td width="750">
-<p style="text-align: center;">QA Test Assessment - Wallethub</p>
+<p style="text-align: center;">QA Test Assessment - FB</p>
 </td>
 </tr>
 </tbody>
