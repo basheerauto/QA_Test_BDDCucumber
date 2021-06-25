@@ -55,7 +55,7 @@
 <p><strong>Version Control</strong></p>
 </td>
 <td width="594">
-<p>GITHUB : Clone Repo URL: <a href="https://github.com/basheerauto/QA_Test_WalletHub">https://github.com/basheerauto/QA_Test_WalletHub</a></p>
+<p>GITHUB : Clone Repo URL: <a href="https://github.com/basheerauto/QA_Test_WalletHub">https://github.com/basheerauto/QA_Test_BDDCucumber</a></p>
 <p>&nbsp;</p>
 </td>
 </tr>
